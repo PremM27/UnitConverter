@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F44336"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="helloworld.example.com.unitconverter.MainActivity">
+
+    <EditText
+        android:id="@+id/temp"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/my_button_bg"
+        android:ems="10"
+        android:textColor="#000000"
+        android:hint="Enter Temperature"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:textSize="25dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp">
+
+        <RadioButton
+            android:id="@+id/c2f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/editText"
+            android:layout_below="@+id/editText"
+            android:background="@drawable/my_button_bg"
+            android:backgroundTint="#FF9800"
+            android:checked="true"
+            android:text="Celsius to Fahrenheit"/>
+
+        <RadioButton
+            android:id="@+id/f2c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/c2f"
+            android:layout_below="@+id/c2f"
+            android:background="@drawable/my_button_bg"
+            android:backgroundTint="#FFEB3B"
+            android:checked="false"
+            android:text="Fahrenheit to Celsius"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignEnd="@+id/temp"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:backgroundTint="#2196f3"
+        android:onClick="convert"
+        android:text="Convert"/>
+</RelativeLayout>
